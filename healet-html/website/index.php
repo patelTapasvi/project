@@ -1,5 +1,5 @@
 <?php
-include_once('header.php');
+include_once ('header.php');
 ?>
 
 <!-- slider section -->
@@ -269,7 +269,8 @@ include_once('header.php');
             </h2>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorem eum consequuntur ipsam repellat dolor soluta aliquid laborum, eius odit consectetur vel quasi in quidem, eveniet ab est corporis tempore.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorem eum consequuntur ipsam repellat
+            dolor soluta aliquid laborum, eius odit consectetur vel quasi in quidem, eveniet ab est corporis tempore.
           </p>
           <a href="">
             Read More
@@ -354,7 +355,8 @@ include_once('header.php');
               Molestiae ad reiciendis dignissimos
             </h5>
             <p>
-              alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+              alteration in some form, by injected humour, or randomised words which don't look even slightly
+              believable.
             </p>
             <a href="">
               Read More
@@ -376,7 +378,8 @@ include_once('header.php');
               Dolores vel maiores voluptatem enim
             </h5>
             <p>
-              alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+              alteration in some form, by injected humour, or randomised words which don't look even slightly
+              believable.
             </p>
             <a href="">
               Read More
@@ -492,7 +495,7 @@ include_once('header.php');
 
 </body>
 
-</html>
+</php>
 <?php
-include_once('footer.php');
+include_once ('footer.php');
 ?>

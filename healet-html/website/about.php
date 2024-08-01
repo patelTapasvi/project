@@ -1,5 +1,5 @@
 <?php
-include_once('header.php');
+include_once ('header.php');
 ?>
 <!-- about section -->
 
@@ -19,7 +19,8 @@ include_once('header.php');
             </h2>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorem eum consequuntur ipsam repellat dolor soluta aliquid laborum, eius odit consectetur vel quasi in quidem, eveniet ab est corporis tempore.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorem eum consequuntur ipsam repellat
+            dolor soluta aliquid laborum, eius odit consectetur vel quasi in quidem, eveniet ab est corporis tempore.
           </p>
           <a href="">
             Read More
@@ -33,10 +34,10 @@ include_once('header.php');
 <!-- end about section -->
 
 <?php
-include_once('footer.php');
+include_once ('footer.php');
 ?>
 
 <!-- end info_section -->
 </body>
 
-</html>
+</php>

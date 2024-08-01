@@ -1,5 +1,5 @@
 ﻿<?php
-include_once('header.php');
+include_once ('header.php');
 ?>
 <div id="page-wrapper">
     <div id="page-inner">
@@ -19,24 +19,26 @@ include_once('header.php');
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php
-                                 foreach ($data as $categories) {
-                                
-                                ?>
-                             <tr>
-                                  <td><?php echo $categories->id?></td>
-                                      <td><?php echo $categories->categories_name?></td>
-                                     <td><img src="upload/categoryimg/<?php echo $categories->image ?>"  width="100px"></td>
-                                    <td>
-                                        <a href="#" class="btn btn-danger">Delete</a>
-                                        <a href="#" class="btn btn-info">Edit</a>
-
-                                    </td>
-                                </tr>
                                 <?php
-                                 } ?>
-								 
-                    
+                                foreach ($data as $categories) {
+
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $categories->id ?></td>
+                                        <td><?php echo $categories->categories_name ?></td>
+                                        <td><img src="upload/categoryimg/<?php echo $categories->image ?>" width="100px">
+                                        </td>
+                                        <td>
+                                            <a href="delete?dcag=<?php echo $categories->id; ?>"
+                                                class="btn btn-danger">Delete</a>
+                                            <a href="edit_categories?e_categories" class="btn btn-info">Edit</a>
+
+                                        </td>
+                                    </tr>
+                                    <?php
+                                } ?>
+
+
 
                             </tbody>
                         </table>
@@ -55,5 +57,5 @@ include_once('header.php');
 <!-- /. PAGE WRAPPER  -->
 </div>
 <?php
-include_once('Footer.php');
+include_once ('Footer.php');
 ?>

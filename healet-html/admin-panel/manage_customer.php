@@ -35,7 +35,8 @@ include_once ('header.php');
                                         <td><?php echo $userdetails->statau ?></td>
 
                                         <td>
-                                            <a href="#" class="btn btn-danger">Delete</a>
+                                            <a href="delete?dcus=<?php echo $userdetails->id; ?>"
+                                                class="btn btn-danger">Delete</a>
                                             <a href="#" class="btn btn-info">Edit</a>
 
                                         </td>

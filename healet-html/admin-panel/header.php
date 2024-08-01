@@ -1,5 +1,15 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!-- <?php
+if (isset($_SESSION['aid'])) {
+
+} else {
+    echo "<script>
+		window.location='admin'
+		</script>";
+}
+?> -->
+
+
+<!DOCTYPE html>
 
 <head>
     <meta charset="utf-8" />
@@ -13,6 +23,11 @@
     <link href="assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -25,7 +40,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="dashboard">
+                    <a class="navbar-brand" href="index">
                         <img src="assets/img/logo.png" />
 
                     </a>
@@ -33,12 +48,13 @@
                 </div>
 
                 <span class="logout-spn">
-                    <a href="#" style="color:#fff;">LOGOUT</a>
+                    <a href="admin_logout" style="color:#fff;">LOGOUT</a>
 
                 </span>
             </div>
         </div>
         <!-- /. NAV TOP  -->
+
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
@@ -46,13 +62,14 @@
 
 
                     <li class="active-link">
-                        <a href="dashboard"><i class="fa fa-desktop "></i>Dashboard <span class="badge">Included</span></a>
+                        <a href="index"><i class="fa fa-desktop "></i>Dashboard <span class="badge">Included</span></a>
                     </li>
 
 
 
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-table "></i>Categories
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i
+                                class="fa fa-table "></i>Categories
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="add_categories">Add Categories</a></li>
@@ -90,4 +107,3 @@
             </div>
 
         </nav>
-        

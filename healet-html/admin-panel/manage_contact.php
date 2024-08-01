@@ -1,5 +1,5 @@
 ﻿<?php
-include_once('header.php');
+include_once ('header.php');
 ?>
 <div id="page-wrapper">
     <div id="page-inner">
@@ -21,23 +21,25 @@ include_once('header.php');
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php
-                                foreach ($data as $contact) {
-                              ?>
-                                <tr>
-                                <td><?php echo $contact->id?></td>
-                                <td><?php echo $contact->customer_Name?></td>
-                                <td><?php echo $contact->Contact_No?></td>
-                                <td><?php echo $contact->email?></td>
-                                <td><img src="../admin-panel/upload/contactimg/<?php echo $contact->custImage?>"alt="" width="100px"></td>
-                                    <td>
-                                        <a href="#" class="btn btn-danger">Delete</a>
-                                        <a href="#" class="btn btn-info">Edit</a>
-
-                                    </td>
-                                </tr>
                                 <?php
-                                } 
+                                foreach ($data as $contact) {
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $contact->id ?></td>
+                                        <td><?php echo $contact->customer_Name ?></td>
+                                        <td><?php echo $contact->Contact_No ?></td>
+                                        <td><?php echo $contact->email ?></td>
+                                        <td><img src="../admin-panel/upload/contactimg/<?php echo $contact->custImage ?>"
+                                                alt="" width="100px"></td>
+                                        <td>
+                                            <a href="delete?dcontact=<?php echo $contact->id; ?>"
+                                                class="btn btn-danger">Delete</a>
+                                            <a href="#" class="btn btn-info">Edit</a>
+
+                                        </td>
+                                    </tr>
+                                    <?php
+                                }
                                 ?>
                             </tbody>
                         </table>
@@ -56,5 +58,5 @@ include_once('header.php');
 <!-- /. PAGE WRAPPER  -->
 </div>
 <?php
-include_once('Footer.php');
+include_once ('Footer.php');
 ?>

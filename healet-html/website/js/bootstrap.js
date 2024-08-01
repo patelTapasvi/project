@@ -1664,7 +1664,7 @@
         } // If this is a touch-enabled device we add extra
         // empty mouseover listeners to the body's immediate children;
         // only needed because of broken event delegation on iOS
-        // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
+        // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.php
 
 
         if ('ontouchstart' in document.documentElement && $(parent).closest(Selector$4.NAVBAR_NAV).length === 0) {
@@ -2210,12 +2210,12 @@
       };
 
       _proto.dispose = function dispose() {
-        [window, this._element, this._dialog].forEach(function (htmlElement) {
-          return $(htmlElement).off(EVENT_KEY$5);
+        [window, this._element, this._dialog].forEach(function (phpElement) {
+          return $(phpElement).off(EVENT_KEY$5);
         });
         /**
          * `document` has 2 events `Event.FOCUSIN` and `Event.CLICK_DATA_API`
-         * Do not move `document` in `htmlElements` array
+         * Do not move `document` in `phpElements` array
          * It will remove `Event.CLICK_DATA_API` event that should remain
          */
 
@@ -2694,17 +2694,17 @@
     return false;
   }
 
-  function sanitizeHtml(unsafeHtml, whiteList, sanitizeFn) {
-    if (unsafeHtml.length === 0) {
-      return unsafeHtml;
+  function sanitizephp(unsafephp, whiteList, sanitizeFn) {
+    if (unsafephp.length === 0) {
+      return unsafephp;
     }
 
     if (sanitizeFn && typeof sanitizeFn === 'function') {
-      return sanitizeFn(unsafeHtml);
+      return sanitizeFn(unsafephp);
     }
 
     var domParser = new window.DOMParser();
-    var createdDocument = domParser.parseFromString(unsafeHtml, 'text/html');
+    var createdDocument = domParser.parseFromString(unsafephp, 'text/php');
     var whitelistKeys = Object.keys(whiteList);
     var elements = [].slice.call(createdDocument.body.querySelectorAll('*'));
 
@@ -2732,7 +2732,7 @@
       if (_ret === "continue") continue;
     }
 
-    return createdDocument.body.innerHTML;
+    return createdDocument.body.innerphp;
   }
 
   /**
@@ -2755,7 +2755,7 @@
     title: '(string|element|function)',
     trigger: 'string',
     delay: '(number|object)',
-    html: 'boolean',
+    php: 'boolean',
     selector: '(string|boolean)',
     placement: '(string|function)',
     offset: '(number|string|function)',
@@ -2779,7 +2779,7 @@
     trigger: 'hover focus',
     title: '',
     delay: 0,
-    html: false,
+    php: false,
     selector: false,
     placement: 'top',
     offset: 0,
@@ -2996,7 +2996,7 @@
           $(tip).addClass(ClassName$6.SHOW); // If this is a touch-enabled device we add extra
           // empty mouseover listeners to the body's immediate children;
           // only needed because of broken event delegation on iOS
-          // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
+          // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.php
 
           if ('ontouchstart' in document.documentElement) {
             $(document.body).children().on('mouseover', null, $.noop);
@@ -3107,7 +3107,7 @@
       _proto.setElementContent = function setElementContent($element, content) {
         if (typeof content === 'object' && (content.nodeType || content.jquery)) {
           // Content is a DOM node or a jQuery
-          if (this.config.html) {
+          if (this.config.php) {
             if (!$(content).parent().is($element)) {
               $element.empty().append(content);
             }
@@ -3118,12 +3118,12 @@
           return;
         }
 
-        if (this.config.html) {
+        if (this.config.php) {
           if (this.config.sanitize) {
-            content = sanitizeHtml(content, this.config.whiteList, this.config.sanitizeFn);
+            content = sanitizephp(content, this.config.whiteList, this.config.sanitizeFn);
           }
 
-          $element.html(content);
+          $element.php(content);
         } else {
           $element.text(content);
         }
@@ -3319,7 +3319,7 @@
         Util.typeCheckConfig(NAME$6, config, this.constructor.DefaultType);
 
         if (config.sanitize) {
-          config.template = sanitizeHtml(config.template, config.whiteList, config.sanitizeFn);
+          config.template = sanitizephp(config.template, config.whiteList, config.sanitizeFn);
         }
 
         return config;
@@ -3530,7 +3530,7 @@
       };
 
       _proto.setContent = function setContent() {
-        var $tip = $(this.getTipElement()); // We use append for html objects to maintain js events
+        var $tip = $(this.getTipElement()); // We use append for php objects to maintain js events
 
         this.setElementContent($tip.find(Selector$7.TITLE), this.getTitle());
 
